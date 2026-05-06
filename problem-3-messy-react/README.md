@@ -22,11 +22,11 @@ WalletPage.tsx           ~25 lines, just renders
 
 | File | Purpose | Depends on |
 |---|---|---|
-| `WalletPage.tsx` | Original code, kept for diff comparison | — |
-| `./improvements/types.ts` | `Blockchain`, `WalletBalance`, `FormattedWalletBalance`, `PriceMap` | nothing |
-| `./improvements/priority.ts` | `getPriority`, `isKnownChain` | `types.ts` |
-| `./improvements/prepareBalances.ts` | Pure pipeline (filter → sort → format) | `types.ts`, `priority.ts` |
-| `./improvements/WalletPage-improved.tsx` | React component | all of the above + hooks |
+| `./original/WalletPage.tsx` | Original code, kept for diff comparison | — |
+| `./refactored/types.ts` | `Blockchain`, `WalletBalance`, `FormattedWalletBalance`, `PriceMap` | nothing |
+| `./refactored/priority.ts` | `getPriority`, `isKnownChain` | `types.ts` |
+| `./refactored/prepareBalances.ts` | Pure pipeline (filter → sort → format) | `types.ts`, `priority.ts` |
+| `./refactored/WalletPage-improved.tsx` | React component | all of the above + hooks |
 
 The dependency graph is a DAG pointing inward: domain has no React, the
 component depends on domain (not the other way around).
